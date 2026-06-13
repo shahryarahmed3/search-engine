@@ -2,9 +2,6 @@
 
 A C++ inverted-index search engine that indexes web pages from a local corpus and returns ranked URL matches using Boolean query operators. Built as an academic project to demonstrate core information-retrieval concepts and STL data structures.
 
-**Author:** Shahryar Ahmed  
-**Language:** C++17  
-**Date:** September 2022
 
 ---
 
@@ -163,8 +160,4 @@ This is an educational implementation focused on data-structure fundamentals, no
 
 Possible extensions: persistent index serialization, TF-IDF ranking, prefix/wildcard search, web crawler integration, and unit tests for token/query edge cases.
 
----
 
-## License
-
-Academic project — free to use and reference with attribution.
