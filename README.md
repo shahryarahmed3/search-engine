@@ -10,8 +10,8 @@ A C++ inverted-index search engine that indexes web pages from a local corpus an
 This project simulates the core pipeline of a web search engine: tokenize documents, build an inverted index, and answer user queries by combining set operations over matching page URLs. The corpus is stored as alternating URL/content line pairs in plain-text files (e.g. `cplusplus.txt` — 86 pages, ~1,500 unique terms).
 
 ```
-Corpus file  →  Tokenize & clean  →  Inverted index  →  Query parsing  →  Matching URLs
-(URL + text)      (map + set)          (map<string, set>)   (+ / - / OR)      (set<string>)
+Corpus file  →  Tokenize & clean  →    Inverted index   →  Query parsing  →  Matching URLs
+(URL + text)      (map + set)        (map<string, set>)     (+ / - / OR)      (set<string>)
 ```
 
 ---
@@ -146,18 +146,4 @@ Use these bullets on your resume or portfolio. Adjust tense and scope to match y
 ### Skills to tag
 
 `C++` · `STL` · `Data Structures` · `Information Retrieval` · `Inverted Index` · `Set Algorithms` · `File I/O` · `String Processing`
-
----
-
-## Limitations & Future Work
-
-This is an educational implementation focused on data-structure fundamentals, not production search:
-
-- No TF-IDF or relevance scoring — results are unordered sets, not ranked lists
-- No persistent index — rebuilt on every run
-- Linear scan in `tokenSet` rather than direct `map` lookup (could use `index[token]` instead)
-- Single-threaded, in-memory only
-
-Possible extensions: persistent index serialization, TF-IDF ranking, prefix/wildcard search, web crawler integration, and unit tests for token/query edge cases.
-
 
